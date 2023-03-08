@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Testing</title>
+    <script src="./public/methodtest.js" defer></script>
+</head>
+
+<style>
+    form {
+        display: grid;
+    }
+
+    main {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+    #btn-container button {
+        padding: 12px;
+    }
+
+    #btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #radio-container {
+        margin-bottom: 12px;
+    }
+
+    #radio-container p {
+        margin: 0px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #response-table {
+        border: 1px solid black;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+
+    th {
+        font-weight: bold;
+        border: 1px solid black;
+    }
+
+    #response-table td {
+        border: 1px solid black;
+    }
+
+    .header-table {
+        width: 100%;
+    }
+
+    summary {
+        font-size: x-large;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        padding: 12px;
+        background-color: lightgray;
+    }
+
+    details:hover {
+        cursor: pointer;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    .body-td {
+        display: block;
+    }
+
+    .non-table-td {
+        padding: 12px;
+    }
+</style>
+
+<body>
+    <main>
+        <h1>Welcome to the Methods Testing Page!</h1>
+        <form id="article-form">
+            <label for="article_name">Name</label>
+            <input type="text" id="article_name" name="article_name" required><br>
+
+            <label for="article_body">Body</label>
+            <textarea id="article_body" name="article_body" required></textarea><br>
+
+
+            <label for="article_id">Id</label>
+            <input id="article_id" name="article_id" type="number" min="0" required /><br>
+
+            <div id="radio-container">
+                <p>Select JavaScript Method to Perform the Request</p>
+                  <input type="radio" id="Fetch" name="js_method" value="Fetch" checked>
+                  <label for="Fetch">Fetch</label><br>
+                  <input type="radio" id="XMLHttpRequest" name="js_method" value="XMLHttpRequest">
+                  <label for="XMLHttpRequest">XMLHttpRequest</label><br>
+            </div>
+
+            <div id="btn-container">
+                <button id="post-btn">Post</button>
+                <button id="get-btn">Get</button>
+                <button id="put-btn">Put</button>
+                <button id="delete-btn">Delete</button>
+            </div>
+        </form>
+
+        <table id="response-table">
+            <tr>
+                <th>Headers</th>
+                <th>Origin</th>
+                <th>URL</th>
+                <th>Body</th>
+            </tr>
+        </table>
+
+
+        <details>
+            <summary>
+                Display Raw JSON
+                <span class="icon">👇</span>
+            </summary>
+            <output id="response-output">
+                Click on a method to see a JSON response.
+            </output>
+        </details>
+    </main>
+</body>
+</html>
