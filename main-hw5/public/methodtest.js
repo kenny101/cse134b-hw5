@@ -1,4 +1,4 @@
-import responseHandler from "../modules/response-handler.js/"
+import responseHandler from "../modules/response-handler.js"
 
 const postHandler = {
   doc: document.getElementById("post-btn"),

@@ -105,3 +105,6 @@ const responseHandler = {
     });
     return promise;
   };
+
+
+  export default responseHandler;
