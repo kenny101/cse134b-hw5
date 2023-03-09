@@ -6,10 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Method Testing</title>
-    <!-- <script src="./modules/response-handler.js" type="module" defer></script> -->
-    <script type="module" src="./public/methodtest.js" defer></script>
-    <link rel="stylesheet" href="./public/styles.css">
+    <script src="./public/methodtest.js" defer></script>
 </head>
+
+<style>
+    form {
+        display: grid;
+    }
+
+    main {
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+
+    #btn-container button {
+        padding: 12px;
+    }
+
+    #btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #radio-container {
+        margin-bottom: 12px;
+    }
+
+    #radio-container p {
+        margin: 0px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #response-table {
+        border: 1px solid black;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+
+    th {
+        font-weight: bold;
+        border: 1px solid black;
+    }
+
+    #response-table td {
+        border: 1px solid black;
+    }
+
+    .header-table {
+        width: 100%;
+    }
+
+    summary {
+        font-size: x-large;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        padding: 12px;
+        background-color: lightgray;
+    }
+
+    details:hover {
+        cursor: pointer;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    .body-td {
+        display: block;
+    }
+
+    .non-table-td {
+        padding: 12px;
+    }
+</style>
 
 <body>
     <main>
